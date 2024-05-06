@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.CollegeEntities;
 
 public partial class Parent
 {
+    [Key]
     public int ParentId { get; set; }
 
     public string Address { get; set; }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.SchoolEntities;
 
 public partial class AssignmentResult
 {
+    [Key]
     public int ResultId { get; set; }
 
     public int? StudentId { get; set; }

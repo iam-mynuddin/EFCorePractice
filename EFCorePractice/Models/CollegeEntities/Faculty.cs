@@ -18,12 +18,5 @@ public partial class Faculty
     public string Address { get; set; }
 
     public string FullName { get; set; }
-
-    public virtual ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
-
-    public virtual ICollection<Attendance> Attendances { get; set; } = new List<Attendance>();
-
-    public virtual ICollection<FacultySubject> FacultySubjects { get; set; } = new List<FacultySubject>();
-
     public virtual User User { get; set; }
 }

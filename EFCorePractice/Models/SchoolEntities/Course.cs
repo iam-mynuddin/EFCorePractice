@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.SchoolEntities;
 
 public partial class Course
 {
+    [Key]
     public int CourseId { get; set; }
 
     public string CourseName { get; set; }
 
     public int? TeacherId { get; set; }
 
-    public virtual ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
-
-    public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
-
-    public virtual ICollection<Exam> Exams { get; set; } = new List<Exam>();
 
     public virtual Teacher Teacher { get; set; }
 }

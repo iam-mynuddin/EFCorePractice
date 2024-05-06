@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.CollegeEntities;
 
 public partial class AssignmentSubmission
 {
+
+    [Key]
     public int SubmissionId { get; set; }
 
     public string Answer { get; set; }

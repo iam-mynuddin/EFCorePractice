@@ -1,17 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.SchoolEntities;
 
 public partial class Grade
 {
+    [Key]
     public int GradeId { get; set; }
 
     public string GradeName { get; set; }
-
-    public virtual ICollection<AssignmentResult> AssignmentResults { get; set; } = new List<AssignmentResult>();
-
-    public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
-
-    public virtual ICollection<ExamResult> ExamResults { get; set; } = new List<ExamResult>();
 }

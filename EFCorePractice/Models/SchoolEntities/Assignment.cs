@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.SchoolEntities;
 
 public partial class Assignment
 {
+    [Key]
     public int AssignmentId { get; set; }
 
     public string AssignmentName { get; set; }
@@ -13,7 +15,6 @@ public partial class Assignment
 
     public int? CourseId { get; set; }
 
-    public virtual ICollection<AssignmentResult> AssignmentResults { get; set; } = new List<AssignmentResult>();
 
     public virtual Course Course { get; set; }
 }

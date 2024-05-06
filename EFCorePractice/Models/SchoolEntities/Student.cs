@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.SchoolEntities;
 
 public partial class Student
 {
+    [Key]
     public int StudentId { get; set; }
 
     public string FirstName { get; set; }
@@ -15,11 +17,4 @@ public partial class Student
 
     public DateOnly? DateOfBirth { get; set; }
 
-    public virtual ICollection<AssignmentResult> AssignmentResults { get; set; } = new List<AssignmentResult>();
-
-    public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
-
-    public virtual ICollection<ExamResult> ExamResults { get; set; } = new List<ExamResult>();
-
-    public virtual ICollection<Club> Clubs { get; set; } = new List<Club>();
 }

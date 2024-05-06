@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace EFCorePractice.Models.CollegeEntities;
 
 public partial class FeeDetail
 {
+    [Key]
     public int FeeId { get; set; }
 
     public double Amount { get; set; }
