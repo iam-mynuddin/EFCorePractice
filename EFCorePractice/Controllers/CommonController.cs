@@ -36,8 +36,8 @@ namespace EFCorePractice.Controllers
         [HttpGet("getallwithinclude")]
         public async Task<IActionResult> GetAllWithInclude()
         {
-            var SchlStudents = _schlDb.IncludeAll<Models.SchoolEntities.Student>().ToList();
-            var ClgStudents = _clgDb.IncludeAll<Models.CollegeEntities.Student>().ToList();
+            var SchlStudents = _schlDb.Students.ToList();
+            var ClgStudents = _clgDb.Students.ToList();
             var data = new
             {
                 ClgStudents,
